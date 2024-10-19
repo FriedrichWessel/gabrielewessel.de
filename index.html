@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Responsive Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-light-green: #d0e6b2;
+            --color-orange: #d96d34;
+            --color-white: #ffffff;
+            --color-light-orange: #dbc3a9;
+            --color-very-light-orange: #ffe8c9;
+        }
+        
+        body {
+            background-color: var(--color-very-light-orange);
+        }
+        .content-section {
+            display: flex;
+            align-items: stretch; 
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-direction: row;
+        }
+
+        .light-orange-box {
+            background-color: var(--color-light-orange); 
+        }
+
+        .orange-box {
+            background-color: var(--color-orange);
+        }
+
+        .light-green-box {
+            background-color: var(--color-light-green);
+        }
+        .content-left {
+            padding: 20px;
+            margin-left: 50px;
+            width: 45%;
+        }
+        .content-right {
+            padding: 20px;
+            width: 45%;
+            margin-right: 20px;
+        }
+        .text-box {
+            position: absolute;
+            top: 0;
+            left: 2%;
+            width: 46%;
+            background-color: var(--color-orange);
+            padding: 20px;
+            background-image: url('assets/krakel_kombi_sw2.png');
+            background-size: cover; /* Ensures the image covers the entire element */
+            background-position: center; /* Centers the image */
+            background-blend-mode: multiply; /* Applies the blend mode */
+        }
+        .image-container img {
+            max-height: 600px;
+            width: auto;
+        }
+        .headline {
+            font-weight: bold;
+            color: var(--color-white);
+        }
+        .text-bold {
+            font-weight: bold;
+        }
+        .info-box {
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content-left, .content-right, .text-box {
+                width: 100%;
+                margin-bottom: 20px;
+                position: static;
+                margin-left: 0px;
+            }
+            .info-box {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 1.5em; /* Adjust headline size for smaller screens */
+            }
+            .text-box, .content-left, .content-right {
+                padding: 10px;
+                margin: 0px; /* Reduce padding for smaller screens */
+            }
+            .info-box {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="mt-4">
+    <div class="text-box">
+        <h2 class="headline">TRAGEN SIE IHR KIND INS LEBEN!</h2>
+    </div>
+    
+    <div class="content-section light-orange-box">
+        <div class="content-left info-box light-green-box">
+            <p>Sie wollen ihr Kind auf Händen tragen? <br>
+                Ihr Kind sollte Ihnen am Herzen liegen. <br>
+                Tragen Sie es am Bauch! <br>
+                Dafür gibt es <span class="text-bold">Tragehilfen.</span></p>
+        </div>
+        <div class="image-container">
+            <img src="assets/portrait_03.png" alt="Image of mother and child">
+        </div>
+        
+    </div>
+    
+    <div class="content-section light-orange-box">
+        <div class="content-left orange-box">
+            <h2 class="headline">EIN NATÜRLICHES ZUSAMMENSPIEL</h2>
+            <p>Im Schutze Ihres Körpers kann sich <br>
+            Ihr Baby geistig und körperlich gesund und angstfrei entwickeln. <br>
+            Rufen Sie mich an, ich zeige Ihnen die ersten Schritte mit dem Tragetuch <br>
+            und gebe Ihnen Informationen rund ums Tragen und weitere Tragemöglichkeiten.</p>
+        </div>
+        <div class="content-right light-green-box">
+            <h3 class="headline">Das Tragen mit Tragehilfen ist bewegter Körperkontakt:</h3>
+            <ul>
+                <li>Es befriedigt das lebensnotwendige Nähebedürfnis des Babys ohne es zu verwöhnen.</li>
+                <li>Durch die Anhock-Spreiz-Stellung wird die Hüftreifung optimal gefördert.</li>
+                <li>Die Reifung des Verdauungstraktes ist für das Baby stressfreier.</li>
+                <li>Mit dem Baby in der Tragehilfe sind alle Wege für Sie barrierefrei.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-image: url('spiral.jpg'); /* Use abstract spiral as background */
+    background-size: cover;
+    color: #fff;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.5rem 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #1167b1;
+}
+
+#intro {
+    background-color: #6db1ff;
+}
+
+#about {
+    background-color: #f5f5f5;
+}
+
+#services {
+    background-color: #76c7c0;
+}
+
+footer {
+    background-color: #333;
+}
+
+img {
+    max-width: 300px;
+}
