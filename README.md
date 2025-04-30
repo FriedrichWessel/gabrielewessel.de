@@ -4,13 +4,13 @@ This repository contains the website for Gabriele Wessel, a certified baby carri
 
 ## Deployment
 
-The website is automatically deployed to GitHub Pages when changes are pushed to the main branch. The deployment is handled by a GitHub Actions workflow defined in `.github/workflows/deploy.yml`.
+The website is automatically deployed to GitHub Pages when changes are pushed to the main branch. The deployment is handled by a GitHub Actions workflow defined in `.github/workflows/deploy.yml` that follows GitHub's recommended template for static site deployment.
 
 ### How it works
 
 1. When changes are pushed to the main branch, the GitHub Actions workflow is triggered.
-2. The workflow copies the content from the `src` directory and the `assets` directory to a build directory.
-3. It fixes the asset paths in HTML files to ensure they work correctly on GitHub Pages.
+2. The workflow copies the content from the `src`, `assets`, and `sources` directories to a build directory.
+3. It fixes the asset paths in HTML and CSS files to ensure they work correctly on GitHub Pages.
 4. The content is then deployed to GitHub Pages.
 
 ## Custom Domain Setup

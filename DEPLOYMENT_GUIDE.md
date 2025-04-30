@@ -59,7 +59,7 @@ DNS changes can take up to 24-48 hours to propagate globally, although it's ofte
 
 1. Go to your GitHub repository
 2. Click on the "Actions" tab
-3. You should see a workflow run for the "Deploy to GitHub Pages" workflow
+3. You should see a workflow run for the "Deploy static content to Pages" workflow
 4. Make sure it completed successfully (green checkmark)
 
 ### Verify DNS Configuration
