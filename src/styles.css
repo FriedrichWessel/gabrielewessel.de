@@ -1,23 +1,87 @@
 /* General Styles */
 :root {
-  --orange: #FF7F50;
+  --orange: #ff7f50;
   --green: #C5D9A5;
   --pink: #E75480;
   --rose: #FF5A79;
+  --light-orange: #fcbb70;
   --text-dark: #333333;
   --text-light: #FFFFFF;
+  --off-white: #f1efe1;
+  --body-bg: #ebe9d9
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
-  background-color: #ebe9d9; /* Light beige background to match the swirl graphic */
+  background-color: var(--body-bg);
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling from background elements */
+}
+
+/* Background Swirl Elements */
+.bg-swirl {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -20;
+  pointer-events: none; /* Allow clicking through the swirls */
+  opacity: 0.4;
+}
+
+.bg-swirl-1 {
+  top: 25%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background-image: url('../sources/design_sources/kringel_5.png');
+  transform: rotate(15deg);
+}
+
+.bg-swirl-2 {
+  top: 40%;
+  right: -15%;
+  width: 60%;
+  height: 60%;
+  background-image: url('../sources/design_sources/kringel_7.png');
+  transform: rotate(-10deg);
+  opacity: 0.3;
+}
+
+.bg-swirl-3 {
+  bottom: 10%;
+  left: -5%;
+  width: 40%;
+  height: 40%;
+  background-image: url('../sources/design_sources/kringel_8.png');
+  transform: rotate(5deg);
+}
+
+.bg-swirl-4 {
+  top: 70%;
+  right: 10%;
+  width: 45%;
+  height: 45%;
+  background-image: url('../sources/design_sources/kringel_5.png');
+  transform: rotate(-25deg) scale(0.8);
+  opacity: 0.25;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--light-orange);
+  text-decoration: underline;
 }
 
 .handwritten-heading {
@@ -30,8 +94,18 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--orange) !important;
 }
 
+.image-box{
+  padding-right: 0px !important
+}
 .text-accent {
   color: var(--pink);
+}
+
+.intro-container {
+  padding-bottom: 0px !important;
+}
+.darkend-background-1 {
+  background-color: #bab8a83c !important;
 }
 
 /* Section Styles */
@@ -112,10 +186,9 @@ h1, h2, h3, h4, h5, h6 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 1.0;
+  opacity: 0.4;
   z-index: -10;
   pointer-events: none;
-  display: none;
 }
 
 /* Ensure contact info text is readable over the swirl */
@@ -126,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Circular Background - Global */
 .circular-background {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -145,12 +218,11 @@ h1, h2, h3, h4, h5, h6 {
 .green-box-bg {
   position: absolute;
   top: -10px;
-  right: -10px;
-  bottom: -10px;
+  right: 0;
+  bottom: 0;
   left: 20%;
   background-color: var(--green);
   z-index: -1;
-  border-radius: 5px;
 }
 
 /* Decorative Box */
@@ -171,8 +243,30 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 1;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--off-white);
   border-radius: 5px;
+}
+
+/* Make columns in natural-interaction section have equal height and align text */
+#natural-interaction .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#natural-interaction .col-12.col-md-6 {
+  display: flex;
+}
+
+#natural-interaction .col-12.col-md-6 .p-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Align text to bottom in the right column */
+#natural-interaction .col-12.col-md-6:nth-child(2) .p-4 {
+  justify-content: flex-end;
 }
 
 /* Section Pink Content for Side-by-Side Layout */
@@ -185,9 +279,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Photo Styling */
 .portrait {
   max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin: 1rem 0;
+  margin: 0;
 }
 
 /* Responsive Adjustments */
