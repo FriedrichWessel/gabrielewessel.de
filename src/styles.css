@@ -1,0 +1,245 @@
+/* General Styles */
+:root {
+  --orange: #FF7F50;
+  --green: #C5D9A5;
+  --pink: #E75480;
+  --rose: #FF5A79;
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+.handwritten-heading {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.text-primary {
+  color: var(--orange) !important;
+}
+
+.text-accent {
+  color: var(--pink);
+}
+
+/* Section Styles */
+.section-white {
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.section-orange {
+  background-color: var(--orange);
+  color: var(--text-light);
+  position: relative;
+}
+
+.section-green {
+  background-color: var(--green);
+  position: relative;
+}
+
+.section-pink {
+  background-color: var(--pink);
+  color: var(--text-light);
+  position: relative;
+}
+
+.section-rose {
+  background-color: var(--rose);
+  color: var(--text-light);
+  position: relative;
+}
+
+/* Hero Section */
+#hero {
+  padding: 3rem 0;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+}
+
+/* Custom Lists */
+.custom-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.custom-list li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.custom-list li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: currentColor;
+}
+
+/* Contact Info Section */
+.contact-details p {
+  margin-bottom: 0.25rem;
+}
+
+.certification {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* Circular Background */
+.circular-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../sources/design_sources/kringel_7.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 0;
+  mix-blend-mode: darken;
+}
+
+/* Photo Styling */
+.portrait {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  /* Tablet and above */
+  .container {
+    max-width: 720px;
+  }
+  
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  /* Two-column layout for wider screens */
+  .wide-layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .wide-layout .col-left,
+  .wide-layout .col-right {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+  .container {
+    max-width: 960px;
+  }
+  
+  
+  /* Enhanced desktop layout */
+  .row-desktop {
+    display: flex;
+    align-items: center;
+  }
+  
+  .col-desktop-left {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .col-desktop-right {
+    flex: 1;
+    padding-left: 2rem;
+  }
+}
+
+/* Add additional swirl background elements */
+.swirl-top-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../sources/assets/krakel_kombi_sw.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  mix-blend-mode: soft-light;
+  filter: contrast(0.2);
+}
+
+.swirl-bottom-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../sources/design_sources/kringel_8.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 0;
+  mix-blend-mode: darken;
+}
+
+/* Mobile-specific adjustments to match flyer layout */
+@media (max-width: 767px) {
+  .section-orange,
+  .section-green,
+  .section-pink,
+  .section-rose {
+    padding: 2rem 1rem;
+  }
+  
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  #hero {
+    padding: 2.5rem 1rem;
+  }
+  
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  
+  /* Force sections to appear in the same order as the flyer */
+  body .container-fluid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Adjust spacing to match flyer */
+  .section-white,
+  .section-orange,
+  .section-green,
+  .section-pink,
+  .section-rose {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
