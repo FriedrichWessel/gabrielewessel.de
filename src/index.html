@@ -14,7 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container-fluid p-0">
+  <div class="container-fluid p-0 position-relative">
+    <!-- Global Background - Disabled -->
+    <!-- <div class="circular-background"></div> -->
+    
     <!-- Orange Header Section -->
     <section id="hero" class="section-orange">
       <div class="swirl-top-right"></div>
@@ -23,23 +26,27 @@
       </div>
     </section>
 
-    <!-- Introduction Section -->
+    <!-- Introduction Section with Image -->
     <section id="intro" class="section-white">
       <div class="container py-4">
-        <div class="row">
-          <div class="col-12">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 order-md-1 order-1 mb-4 mb-md-0">
             <h3 class="text-primary">Sie wollen Ihr Kind auf Händen tragen?</h3>
             <p>Ihr Kind sollte Ihnen am Herzen liegen.<br>
             Tragen Sie es am Bauch und später auf dem Rücken!</p>
             <p>Dafür gibt es Tragehilfen.</p>
           </div>
+          <div class="col-12 col-md-6 order-md-2 order-2 position-relative">
+            <div class="green-box-bg"></div>
+            <img src="../assets/portrait_03.png" alt="Gabriele Wessel mit Baby in Tragetuch" class="img-fluid portrait">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Info Section (with Circular Background) -->
+    <!-- Contact Info Section -->
     <section id="contact-info" class="section-white position-relative">
-      <div class="circular-background"></div>
+      <div class="contact-swirl-bg"></div>
       <div class="container py-4">
         <div class="row justify-content-center">
           <div class="col-10 col-md-8 text-center">
@@ -56,69 +63,71 @@
       </div>
     </section>
 
-    <!-- Photo Section -->
-    <section id="photo-section" class="section-white">
-      <div class="container py-4">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 text-center">
-            <img src="../assets/portrait_03.png" alt="Gabriele Wessel mit Baby in Tragetuch" class="img-fluid portrait">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pink Section - Natural Bonding -->
-    <section id="natural-bonding" class="section-pink">
-      <div class="swirl-bottom-left"></div>
+    <!-- Features Section - Side by Side -->
+    <section id="features" class="section-white">
       <div class="container py-5">
         <div class="row">
-          <div class="col-12 text-center mb-4">
-            <h2 class="handwritten-heading">Natürliche Bindung<br>von Anfang an</h2>
+          <!-- Natural Bonding Section -->
+          <div class="col-12 col-md-6 mb-5 mb-md-0">
+            <div class="section-pink-content p-4">
+              <div class="text-center mb-4">
+                <h2 class="handwritten-heading text-white">Natürliche Bindung<br>von Anfang an</h2>
+              </div>
+              <div class="text-white">
+                <p>Ich zeige Ihnen 6 Bindeweisen mit dem Tragetuch in der Schwangerschaft für:</p>
+                <ul class="custom-list">
+                  <li>Entlastung des Beckenbodens</li>
+                  <li>Unterstützung der Bauchmuskulatur</li>
+                  <li>Aufrichtung der Wirbelsäule</li>
+                  <li>bessere Sauerstoffversorgung</li>
+                </ul>
+                <p>Das können Sie ab der 30. Schwangerschaftswoche nutzen.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-12">
-            <p>Ich zeige Ihnen 6 Bindeweisen mit dem Tragetuch in der Schwangerschaft für:</p>
-            <ul class="custom-list">
-              <li>Entlastung des Beckenbodens</li>
-              <li>Unterstützung der Bauchmuskulatur</li>
-              <li>Aufrichtung der Wirbelsäule</li>
-              <li>bessere Sauerstoffversorgung</li>
-            </ul>
-            <p>Das können Sie ab der 30. Schwangerschaftswoche nutzen.</p>
+          
+          <!-- Benefits Section -->
+          <div class="col-12 col-md-6">
+            <div class="p-4">
+              <h3 class="text-primary">Das Tragen mit Tragehilfen ist bewegter Körperkontakt:</h3>
+              <ul class="custom-list">
+                <li>Es befriedigt das lebensnotwendige Nähebedürfnis des Babys ohne es zu verwöhnen.</li>
+                <li>Durch die Spreiz-Anhock-Haltung wird die Hüftreifung optimal gefördert.</li>
+                <li>Die Reifung des Verdauungstraktes ist für das Baby stressfreier.</li>
+                <li>Mit dem Baby in der Tragehilfe sind alle Wege für Sie barrierefrei.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Green Section - Natural Interaction -->
-    <section id="natural-interaction" class="section-green">
-      <div class="swirl-top-right"></div>
+    <!-- Natural Interaction Section - Side by Side -->
+    <section id="natural-interaction" class="section-white">
       <div class="container py-5">
         <div class="row">
-          <div class="col-12 text-center mb-4">
-            <h2 class="handwritten-heading">Ein natürliches<br>Zusammenspiel</h2>
+          <!-- Natural Interaction Left -->
+          <div class="col-12 col-md-6 mb-5 mb-md-0 position-relative">
+            <div class="decorative-box"></div>
+            <div class="p-4">
+              <div class="text-center mb-4">
+                <h2 class="handwritten-heading text-primary">Ein natürliches<br>Zusammenspiel</h2>
+              </div>
+              <p>Im Schutze Ihres Körpers kann sich Ihr Baby geistig und körperlich gesund und angstfrei entwickeln.<br>
+              Ich zeige Ihnen die ersten Schritte mit dem Tragetuch oder dem Tragesystem und gebe Ihnen Informationen rund ums Tragen und weitere Tragemöglichkeiten.</p>
+            </div>
           </div>
-          <div class="col-12">
-            <p>Im Schutze Ihres Körpers kann sich Ihr Baby geistig und körperlich gesund und angstfrei entwickeln.<br>
-            Ich zeige Ihnen die ersten Schritte mit dem Tragetuch oder dem Tragesystem und gebe Ihnen Informationen rund ums Tragen und weitere Tragemöglichkeiten.</p>
-            <p>Meine Kinder trug ich schon begeistert im Dyadetuch und freue mich, Ihnen die Philosophie des Tragens ein Stück näher bringen zu können.<br>
-            Ich komme gerne zu Ihnen nach Hause.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Orange Section - Benefits -->
-    <section id="benefits" class="section-orange">
-      <div class="container py-5 text-white">
-        <div class="row">
-          <div class="col-12 mb-4">
-            <h3>Das Tragen mit Tragehilfen ist bewegter Körperkontakt:</h3>
-            <ul class="custom-list">
-              <li>Es befriedigt das lebensnotwendige Nähebedürfnis des Babys ohne es zu verwöhnen.</li>
-              <li>Durch die Spreiz-Anhock-Haltung wird die Hüftreifung optimal gefördert.</li>
-              <li>Die Reifung des Verdauungstraktes ist für das Baby stressfreier.</li>
-              <li>Mit dem Baby in der Tragehilfe sind alle Wege für Sie barrierefrei.</li>
-            </ul>
+          
+          <!-- Natural Interaction Right -->
+          <div class="col-12 col-md-6 position-relative">
+            <div class="decorative-box"></div>
+            <div class="p-4">
+              <div class="text-center mb-4">
+                <h2 class="handwritten-heading text-primary">Meine Kinder trug ich</h2>
+              </div>
+              <p>Meine Kinder trug ich schon begeistert im Dyadetuch und freue mich, Ihnen die Philosophie des Tragens ein Stück näher bringen zu können.<br>
+              Ich komme gerne zu Ihnen nach Hause.</p>
+            </div>
           </div>
         </div>
       </div>

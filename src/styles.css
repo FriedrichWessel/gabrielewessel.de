@@ -12,6 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
+  background-color: #ebe9d9; /* Light beige background to match the swirl graphic */
 }
 
 /* Typography */
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Styles */
 .section-white {
-  background-color: #FFFFFF;
+  background-color: transparent; /* Changed from #FFFFFF to transparent to match body background */
   position: relative;
 }
 
@@ -100,9 +101,32 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
 }
 
-/* Circular Background */
-.circular-background {
+/* Contact Swirl Background */
+.contact-swirl-bg {
   position: absolute;
+  top: -250%;
+  left: -250%;
+  width: 600%;
+  height: 600%;
+  background-image: url('../sources/design_sources/kringel_5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1.0;
+  z-index: -10;
+  pointer-events: none;
+  display: none;
+}
+
+/* Ensure contact info text is readable over the swirl */
+#contact-info .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Circular Background - Global */
+.circular-background {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -112,8 +136,50 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.4;
-  z-index: 0;
+  z-index: -10;
   mix-blend-mode: darken;
+  pointer-events: none;
+}
+
+/* Green Box Background for Image */
+.green-box-bg {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: 20%;
+  background-color: var(--green);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/* Decorative Box */
+.decorative-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 4px solid var(--green);
+  border-radius: 8px;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(197, 217, 165, 0.5);
+}
+
+/* Add padding to content inside decorative boxes */
+#natural-interaction .p-4 {
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+/* Section Pink Content for Side-by-Side Layout */
+.section-pink-content {
+  background-color: var(--pink);
+  border-radius: 5px;
+  height: 100%;
 }
 
 /* Photo Styling */
@@ -226,7 +292,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.2rem;
   }
   
-  
   /* Force sections to appear in the same order as the flyer */
   body .container-fluid {
     display: flex;
@@ -241,5 +306,28 @@ h1, h2, h3, h4, h5, h6 {
   .section-rose {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  
+  /* Portrait image scaling for mobile */
+  .portrait {
+    max-height: 90vh;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Ensure correct order for stacked content */
+  .order-1 {
+    order: 1 !important;
+  }
+  
+  .order-2 {
+    order: 2 !important;
+  }
+  
+  /* Adjust spacing for side-by-side sections on mobile */
+  #features .col-12,
+  #natural-interaction .col-12 {
+    margin-bottom: 2rem;
   }
 }
